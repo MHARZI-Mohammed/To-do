@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo-List</title>
+    <title>To-do</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 min-h-screen py-8 px-4 font-sans">
     <div class="max-w-4xl mx-auto">
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
@@ -14,10 +16,10 @@
             </h1>
             <div class="flex flex-col gap-4 mb-4">
                 <div class="flex flex-col md:flex-row gap-4">
-                    <input type="text" id="todoInput" placeholder="Task name" 
-                           class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
-                    <select id="priorityInput" 
-                            class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="text" id="todoInput" placeholder="Task name"
+                        class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
+                    <select id="priorityInput"
+                        class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="low">Low Priority</option>
                         <option value="medium" selected>Medium Priority</option>
                         <option value="high">High Priority</option>
@@ -25,9 +27,9 @@
                 </div>
                 <div class="flex flex-col md:flex-row gap-4">
                     <textarea id="todoDescription" placeholder="Add a description (optional)" rows="2"
-                            class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
-                    <button id="addTodo" 
-                            class="md:self-end px-6 py-2 bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 min-w-[100px]">
+                        class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+                    <button id="addTodo"
+                        class="md:self-end px-6 py-2 bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 min-w-[100px]">
                         Add Todo
                     </button>
                 </div>
@@ -35,29 +37,29 @@
         </div>
 
         <div class="flex flex-col md:flex-row gap-4 mb-6">
-            <select id="filterPriority" 
-                    class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <select id="filterPriority"
+                class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <option value="all">All Priorities</option>
                 <option value="low">Low Priority</option>
                 <option value="medium">Medium Priority</option>
                 <option value="high">High Priority</option>
             </select>
-            <select id="filterStatus" 
-                    class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <select id="filterStatus"
+                class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <option value="all">All Status</option>
                 <option value="active">Active</option>
                 <option value="completed">Completed</option>
             </select>
-            <button id="clearCompleted" 
-                    class="px-6 py-2 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500">
+            <button id="clearCompleted"
+                class="px-6 py-2 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500">
                 Clear Completed
             </button>
         </div>
 
         <div id="todoList" class="bg-white rounded-lg shadow-md p-6">
-            <!-- Todo items will be dynamically inserted here -->
         </div>
     </div>
     <script type="module" src="dist/index.js"></script>
 </body>
+
 </html>
